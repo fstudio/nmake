@@ -22,7 +22,7 @@
 #include "verstamp.h"
 
 #define FATAL       1               // error levels for
-#define ERROR       2               // systems lanuguages
+#define NM_ERROR       2               // systems lanuguages
 #define RESERVED    3               // products
 #define WARNING     4
 
@@ -61,7 +61,7 @@ makeError (
             }
             break;
 
-        case ERROR:
+        case NM_ERROR:
             makeMessage(ERROR_MESSAGE);
             break;
 

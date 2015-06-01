@@ -40,7 +40,7 @@ char  * getDirType(char*, UCHAR*);
 
 #define INCLUDE         0x09
 #define CMDSWITCHES     0x0A
-#define ERROR           0x0B
+#define NM_ERROR           0x0B
 #define MESSAGE         0x0C
 #define UNDEF           0x0D
 
@@ -237,7 +237,7 @@ lgetc()
         else if (dirType == CMDSWITCHES) {
             processCmdSwitches(t);
         }
-        else if (dirType == ERROR) {
+        else if (dirType == NM_ERROR) {
             makeError(line, USER_CONTROLLED, t);
         }
         else if (dirType == MESSAGE) {
@@ -383,7 +383,7 @@ getDirType(
     } else if (!_tcsnicmp(s, "CMDSWITCHES", 11) && (len == 11)) {
         *dirType = CMDSWITCHES;
     } else if (!_tcsnicmp(s, "ERROR", 5) && (len == 5)) {
-        *dirType = ERROR;
+        *dirType = NM_ERROR;
     } else if (!_tcsnicmp(s, "MESSAGE", 7) && (len == 7)) {
         *dirType = MESSAGE;
     } else if (!_tcsnicmp(s, "UNDEF", 5) && (len == 5)) {

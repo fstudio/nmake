@@ -22,6 +22,7 @@
 #ifdef _MSC_VER
 #pragma hdrstop
 #endif
+#include <malloc.h>
 
 void        processEschIn(char *);
 void        parseInlineFileList(char *);

@@ -12,7 +12,8 @@
 //   
 //
 // ==--==
-#include "nmake.h"
+//#include "nmake.h"
+#include "nmake.hpp"
 #include "nmmsg.h"
 #include "proto.h"
 #include "globals.h"

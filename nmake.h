@@ -19,54 +19,19 @@
 //  macros. Global constants are also defined here. Global data is in global.h
 
 
-#include <rotor_pal.h>
-
-#ifdef _DEBUG
-#define assert(e) do { if (!(e)) DebugBreak(); } while (0)
-#else
-#define assert(e) ((void)0)
+#include <Windows.h>
+#include <stdio.h>
+#ifdef UNICODE
+#undef UNICODE
 #endif
+#include <stdint.h>
+#include <tchar.h>
+#include <inttypes.h>
 
 #define ENOENT 2
 #define E2BIG 7
 #define ENOMEM 12
 
-
-#define CDECL __cdecl
-#define _tcsicmp _stricmp
-#define _tcsnicmp _strnicmp
-#define _tcscmp strcmp
-#define _tcsncmp strncmp
-#define _tcspbrk strpbrk
-#define _tcschr strchr
-#define _tcsrchr strrchr
-#define _tcsinc(x) (x+1)
-#define _tcsdec(start, current) (((start) > (current)) ? NULL : (current)-1)
-#define _tcstok strtok
-#define _tcslen strlen
-#define _tcscat strcat
-#define _tcscpy strcpy
-#define _tcsncpy strncpy
-#define _istalnum isalnum
-#define _istdigit isdigit
-#define _istspace isspace
-#define _istalpha isalpha
-#define _tcsspn strspn
-#define _tcstoul strtoul
-#define _totupper toupper
-#define _tccpy(dst, src) { *dst = *src; }
-#define _tcsupr _strupr
-#define _tcscspn strcspn
-#define _tclen(s) sizeof(*(s))
-#define _istlead(x) 0
-#define __max(a, b) (((a) > (b)) ? (a) : (b))
-#define __min(a, b) (((a) < (b)) ? (a) : (b))
-#define _chdir(p) ( (SetCurrentDirectory(p)) ? 0 : -1 )
-#define _unlink(f) ( (DeleteFileA(f)) ? 0 : -1 )
-#define strtol(nptr, endptr, base) ((LONG)strtoul((nptr), (endptr), (base)))
-#ifndef putchar
-#define putchar(c) putc((c), stdout)
-#endif
 
 extern char *_pgmptr; // initialized in main() to be argv[0]
 

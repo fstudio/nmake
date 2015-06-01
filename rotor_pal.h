@@ -68,8 +68,8 @@ typedef unsigned short wchar_t;
 #define _WCHAR_T_DEFINED
 #endif
 
-#include <pal_error.h>
-#include <pal_mstypes.h>
+#include "pal_error.h"
+#include "pal_mstypes.h"
 
 /******************* Compiler-specific glue *******************************/
 

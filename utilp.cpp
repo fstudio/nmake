@@ -31,7 +31,7 @@
 #ifdef _MSC_VER
 #pragma hdrstop
 #endif
-
+#include <time.h>
 
 STRINGLIST *
 expandWildCards(

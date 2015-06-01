@@ -16,7 +16,7 @@
 #ifdef _MSC_VER
 #pragma hdrstop
 #endif
-
+#include <stdint.h>
 
 #ifdef _M_IX86
 
@@ -39,8 +39,8 @@ char *_pgmptr; // initialized in main() to be argv[0]
 time_t ConvertFileTime(FILETIME *ft)
 {
     // this routine was cloned from pal/unix/file/filetime.c
-    const __int64 SECS_BETWEEN_EPOCHS = I64(11644473600);
-    const __int64 SECS_TO_100NS = I64(10000000); /* 10^7 */
+    const __int64 SECS_BETWEEN_EPOCHS = int64_t(11644473600);
+    const __int64 SECS_TO_100NS = int64_t(10000000); /* 10^7 */
 
     __int64 UnixTime;
 

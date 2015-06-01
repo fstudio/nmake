@@ -84,4 +84,4 @@
 #define VER_FILEFLAGS				(VER_PRIVATEBUILD|VER_PRERELEASE|VER_DEBUG)
 
 #define VER_COMPANYNAME_STR 		"Microsoft Corporation"
-#define VER_PRODUCTNAME_STR		"Microsoft (R) Developer Studio"
+#define VER_PRODUCTNAME_STR		"Microsoft \x00AE Developer Studio"

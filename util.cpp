@@ -22,6 +22,7 @@
 #ifdef _MSC_VER
 #pragma hdrstop
 #endif
+#include <malloc.h>
 
 // Prototypes of functions local to this module
 

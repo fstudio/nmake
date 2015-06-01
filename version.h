@@ -13,8 +13,8 @@
 //
 // ==--==
 
-#define rmj             7
+#define rmj             16
 #define rmm             0
-#define rup             9351
+#define rup             0
 #define szVerName       ""
 #define szVerUser       "Rotor"

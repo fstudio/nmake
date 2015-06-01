@@ -21,9 +21,9 @@
 #ifdef _MSC_VER
 #pragma hdrstop
 #endif
-
+#include <direct.h>
 #include "verstamp.h"
-#include <palstartup.h>
+//#include <palstartup.h>
 
 int       readEnvironmentVars(void);
 void      readMakeFiles(void);
@@ -88,6 +88,7 @@ const char * const bltInCmd0[] = {
     ".c",
     ".cpp",
     ".cxx",
+	".cc",
     ".bas",
     ".cbl",
     ".f",

@@ -21,6 +21,7 @@
 #ifdef _MSC_VER
 #pragma hdrstop
 #endif
+#include <direct.h>
 
 #define SLASH '\\'
 #define PUBLIC
