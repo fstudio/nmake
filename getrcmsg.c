@@ -14,7 +14,7 @@
 // ==--==
 // getrcmsg.c
 
-#include "rotor_pal.h"
+#include "nmake.h"
 
 static HINSTANCE    hInstModule = NULL;
 
@@ -65,7 +65,6 @@ get_err(unsigned msg_num)
     rgchErr[0]='\0';
     return rgchErr;
 
-    return rgchErr;
 }
 
 int

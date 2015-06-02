@@ -16,7 +16,9 @@
 
 #ifndef __GETMSG_H__
 #define __GETMSG_H__
-
+#ifdef __cplusplus
+extern "C"{
+#endif
 #if __GNUC__
 extern "C" __cdecl char *  get_err(unsigned);
 #else
@@ -24,5 +26,9 @@ char *  get_err(unsigned);
 #endif
 int SetErrorFile(char *szFilename, char *szExeName, int fSearchExePath);
 long SetHInstace(long hInstModule);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif // __GETMSG_H__

@@ -28,7 +28,6 @@
 
 #define NmakeStr "NMAKE"
 
-
 void __cdecl
 makeError (
     unsigned lineNumber,

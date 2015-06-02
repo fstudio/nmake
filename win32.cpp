@@ -217,6 +217,8 @@ int __cdecl _spawnvp(int mode, const char *cmdname, const char * const * argv)
     return (int)ExitCode;
 }
 
+#ifndef _WIN32
+
 int __cdecl putc(int c, FILE *s)
 {
     char ch;
@@ -226,3 +228,4 @@ int __cdecl putc(int c, FILE *s)
 }
 
 
+#endif
