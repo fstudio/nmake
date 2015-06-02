@@ -1,6 +1,6 @@
 ####USE CMD Build
 #NMAKE Makefile.
-TARGET=nmake.exe
+TARGET=nmake_new.exe
 CC=cl
 LINK=link
 RC=rc
