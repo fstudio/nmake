@@ -435,7 +435,7 @@ expandCommandLine(
     /* Skip whitespace */
     for (;;p++) {
         if (!(WHITESPACE(*p)))
-            break;                      // argc>1 ð this will happen
+            break;                      // argc>1 ?this will happen
         else *pBuf++ = *p;
     }
 

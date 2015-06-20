@@ -19,3 +19,7 @@
 #include "globals.h"
 #include "grammar.h"
 
+#ifndef ERANGE
+#define ERANGE          34
+#endif
+

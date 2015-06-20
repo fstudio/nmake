@@ -260,7 +260,7 @@ expandFileNames(
     char *s,
      *t = NULL;
     STRINGLIST *p;                  // Main list pointer
-    STRINGLIST *pNew,               // Pointer to new list
+    STRINGLIST *pNew=nullptr,               // Pointer to new list
                *pBack;              // Pointer to one element back
     char *saveText = NULL;
 

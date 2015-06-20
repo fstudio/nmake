@@ -11,7 +11,7 @@ LIBRARY=kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib
 COBJS=getrcmsg.obj
 CXXOBJS=action.obj build.obj charmap.obj command.obj  error.obj exec.obj \
 file.obj globals.obj ifexpr.obj init.obj  inline.obj lexer.obj macro.obj nmake.obj parser.obj print.obj \
-rpn.obj rule.obj util.obj utilp.obj win32.obj
+rpn.obj rule.obj util.obj utilp.obj 
 RESOURCES=nmake.res
 
 

@@ -42,7 +42,11 @@ UCHAR  okToDelete;                     // do not del unless exec'ing cmd
 #ifdef _M_IX86
 UCHAR  fRunningUnderChicago;
 
-extern UCHAR FIsChicago(void);
+UCHAR
+FIsChicago(void)
+{
+	return 0;  // The PAL is Windows NT only
+}
 #endif
 
 const char * const builtInTarg[] = {

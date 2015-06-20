@@ -28,23 +28,28 @@
 #include <tchar.h>
 #include <inttypes.h>
 
+#include <stdio.h>
+#include <stdlib.h>
+#include <io.h>
+#include <process.h>
+
 #define ENOENT 2
 #define E2BIG 7
 #define ENOMEM 12
 
 
-extern char *_pgmptr; // initialized in main() to be argv[0]
+//extern char *_pgmptr; // initialized in main() to be argv[0]
 
 typedef unsigned long _fsize_t;
 
-struct _finddata_t {
-        unsigned    attrib;
-        time_t      time_create;    /* -1 for FAT file systems */
-        time_t      time_access;    /* -1 for FAT file systems */
-        time_t      time_write;
-        _fsize_t    size;
-        char        name[260];
-};
+//struct _finddata_t {
+//        unsigned    attrib;
+//        time_t      time_create;    /* -1 for FAT file systems */
+//        time_t      time_access;    /* -1 for FAT file systems */
+//        time_t      time_write;
+//        _fsize_t    size;
+//        char        name[260];
+//};
 
 #define _A_NORMAL       0x00    /* Normal file - No read/write restrictions */
 #define _A_RDONLY       0x01    /* Read only file */
@@ -56,15 +61,15 @@ struct _finddata_t {
 typedef INT_PTR intptr_t;
 
 // these are implemented in win32.cpp as wrappers on top of the PAL
-intptr_t __cdecl _findfirst(const char *, struct _finddata_t *);
-int __cdecl _findnext(intptr_t, struct _finddata_t *);
-int __cdecl _findclose(intptr_t);
-int __cdecl _access(const char *path, int mode);
-char *  __cdecl _strupr(char *);
-char * __cdecl _strerror(const char *strErrMsg);
-#define P_WAIT 0
-int __cdecl _spawnvp(int mode, const char *cmdname, const char * const * argv);
-int __cdecl putc(int c, FILE *s);
+//intptr_t __cdecl _findfirst(const char *, struct _finddata_t *);
+//int __cdecl _findnext(intptr_t, struct _finddata_t *);
+//int __cdecl _findclose(intptr_t);
+//int __cdecl _access(const char *path, int mode);
+//char *  __cdecl _strupr(char *);
+//char * __cdecl _strerror(const char *strErrMsg);
+//#define P_WAIT 0
+//int __cdecl _spawnvp(int mode, const char *cmdname, const char * const * argv);
+//int __cdecl putc(int c, FILE *s);
 
 
 #include "getmsg.h"

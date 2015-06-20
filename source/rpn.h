@@ -86,6 +86,7 @@ static UCHAR precVector[] = {
 #define LEFT_PAREN     25
 
 
+
 // error table used by the getTok() routines to detect illegal token combinations.
 // The table is explained with the routine check_syntax_error()
 
